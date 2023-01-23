@@ -1,0 +1,18 @@
+@import "src/constants/variable.scss";
+
+.main_section {
+  width: 100%;
+  height: calc(100vh - $header-height);
+  display: flex;
+
+  .left_section {
+    height: calc(100vh - $header-height);
+    padding: 1.5rem;
+    border-right: 0.5px solid rgba(0, 0, 0, 0.188);
+  }
+
+  .right_section {
+    width: 100%;
+    height: calc(100vh - $header-height);
+  }
+}
