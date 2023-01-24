@@ -2,9 +2,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
 
   .label {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
   }
 }
