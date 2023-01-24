@@ -6,13 +6,17 @@
   display: flex;
 
   .left_section {
+    background-color: #c07efa;
     height: calc(100vh - $header-height);
     padding: 1.5rem;
     border-right: 0.5px solid rgba(0, 0, 0, 0.188);
   }
 
   .right_section {
+    background-color: rgb(50, 49, 49);
     width: 100%;
     height: calc(100vh - $header-height);
+    overflow-y: scroll;
+    padding: 1.5rem;
   }
 }

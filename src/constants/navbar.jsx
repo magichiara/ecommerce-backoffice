@@ -16,7 +16,7 @@ export const navBarLinks = [
   },
   {
     id: 3,
-    label: "Prodocuts",
+    label: "Products",
     route: "products",
     icon: <BiCategoryAlt />,
   },
@@ -28,7 +28,7 @@ export const navBarLinks = [
   },
   {
     id: 5,
-    label: "User",
+    label: "Users",
     route: "users",
     icon: <BiUserCircle />,
   },
