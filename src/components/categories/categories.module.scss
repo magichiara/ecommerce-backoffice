@@ -12,7 +12,30 @@
   align-items: center;
   gap: 2rem;
 
+  .title {
+    display: flex;
+    align-self: flex-start;
+    gap: 1rem;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      padding: 1rem;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      background-color: #e9ff6d;
+    }
+  }
+
   h3 {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
     align-self: flex-start;
     color: white;
   }

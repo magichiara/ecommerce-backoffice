@@ -1,31 +1,39 @@
 .main {
-  position: relative;
-
-  h4 {
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    color: white;
-    text-shadow: 0 0 2px rgba($color: #000000, $alpha: 0.4);
-    font-weight: 700;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-  }
+  width: 300px;
+  background-color: #c07efa;
+  padding: 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
 
   img {
-    box-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.4);
-    width: 280px;
-    border-radius: 0.5rem;
-    opacity: 0.8;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+  }
 
-    &:hover {
-      opacity: 1;
-      transform: scale(1.1);
+  .name {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    align-self: flex-start;
+  }
+
+  .btns {
+    display: flex;
+    gap: 0.8rem;
+    align-self: flex-start;
+
+    button {
+      width: 80px;
+      border: none;
+      padding: 0.5rem 0.6rem;
+      background-color: #e9ff6d;
+      color: black;
+      font-weight: 600;
+      border-radius: 0.2rem;
+      box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.3);
+      cursor: pointer;
     }
   }
 }

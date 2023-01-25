@@ -4,7 +4,7 @@ import { Home } from "../home/Home";
 import { Categories } from "../categories/Categories";
 import { useState } from "react";
 
-export const Main = () => {
+export const Main = ({ setModal }) => {
   const [route, setRoute] = useState("home");
 
   return (
@@ -15,7 +15,7 @@ export const Main = () => {
 
       <div className={main.right_section}>
         {route === "home" && <Home />}
-        {route === "categories" && <Categories />}
+        {route === "categories" && <Categories setModal={setModal} />}
         {route === "products" && <Home />}
         {route === "orders" && <Home />}
         {route === "users" && <Home />}
