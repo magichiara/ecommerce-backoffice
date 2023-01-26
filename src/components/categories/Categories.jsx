@@ -4,11 +4,11 @@ import { GET } from "../../utils/endpoints";
 import { CategoriesItem } from "../categories-item/CategoriesItem";
 import { Loader } from "../loader/Loader";
 
-export const Categories = ({ setModal }) => {
+export const Categories = ({ setModal, setModalChildren }) => {
   const [categoryList, setCategoryList] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  /*   const filteredCategories = (arr) => {
+  /* const filteredCategories = (arr) => {
     const categoryArr = ["shoes", "electronics", "clothes", "others", "licras"];
     return arr.filter((category) =>
       categoryArr.includes(category.name.toLowerCase())
@@ -32,7 +32,14 @@ export const Categories = ({ setModal }) => {
     <div className={categories.main}>
       <div className={categories.title}>
         <h3>CATEGORIES</h3>
-        <button onClick={() => setModal(true)}>+</button>
+        <button
+          onClick={() => {
+            setModalChildren("categories");
+            setModal(true);
+          }}
+        >
+          +
+        </button>
       </div>
 
       <div className={categories.container}>

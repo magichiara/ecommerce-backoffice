@@ -2,7 +2,7 @@ import form from "./form.module.scss";
 import { useState } from "react";
 import { POST } from "../../utils/endpoints";
 
-export const Form = ({ setModal }) => {
+export const Form = () => {
   const [inputName, setInputName] = useState("");
   const [inputImage, setInputImage] = useState("");
 
@@ -14,9 +14,6 @@ export const Form = ({ setModal }) => {
     const body = { name: inputName, image: inputImage };
     POST("categories", body).then((data) => {
       console.log(data);
-      if (data.status > 199 && data.status < 400) {
-        setModal(false);
-      }
     });
   };
 
