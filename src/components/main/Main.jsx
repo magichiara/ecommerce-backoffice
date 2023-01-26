@@ -3,8 +3,9 @@ import { Navbar } from "../navbar/Navbar";
 import { Home } from "../home/Home";
 import { Categories } from "../categories/Categories";
 import { useState } from "react";
+import { Products } from "../products/Products";
 
-export const Main = ({ setModal }) => {
+export const Main = ({ setModal, setModalChildren }) => {
   const [route, setRoute] = useState("home");
 
   return (
@@ -15,8 +16,12 @@ export const Main = ({ setModal }) => {
 
       <div className={main.right_section}>
         {route === "home" && <Home />}
-        {route === "categories" && <Categories setModal={setModal} />}
-        {route === "products" && <Home />}
+        {route === "categories" && (
+          <Categories setModal={setModal} setModalChildren={setModalChildren} />
+        )}
+        {route === "products" && (
+          <Products setModal={setModal} setModalChildren={setModalChildren} />
+        )}
         {route === "orders" && <Home />}
         {route === "users" && <Home />}
       </div>
