@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { GET } from "../../utils/endpoints";
 import { Loader } from "../loader/Loader";
 import { ProductsItem } from "../products-item/ProductsItem";
+import { Title } from "../title/Title";
 
 export const Products = ({ setModal, setModalChildren }) => {
   const [productsList, setProductsList] = useState([]);
@@ -25,7 +26,7 @@ export const Products = ({ setModal, setModalChildren }) => {
   return (
     <div className={products.main}>
       <div className={products.title}>
-        <h3>PRODUCTS</h3>
+        <Title title="PRODUCTS" />
         <button
           onClick={() => {
             setModalChildren("products");
