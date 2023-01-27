@@ -15,7 +15,7 @@ export const Main = ({ setModal, setModalChildren }) => {
       </div>
 
       <div className={main.right_section}>
-        {route === "home" && <Home />}
+        {route === "home" && <Home setRoute={setRoute} />}
         {route === "categories" && (
           <Categories setModal={setModal} setModalChildren={setModalChildren} />
         )}

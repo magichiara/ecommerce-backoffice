@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Title } from "../title/Title";
 import { MenuVoice } from "../menuvoice/MenuVoice";
 
-export const Home = () => {
+export const Home = ({ setRoute }) => {
   const MainSection = styled.div`
     width: 100%;
     height: 100vh;
@@ -43,10 +43,10 @@ export const Home = () => {
       <MainSection>
         <Title title="HOME" />
         <VoicesContainer>
-          <Voice>
+          <Voice onClick={() => setRoute("categories")}>
             <MenuVoice menuvoice="CATEGORIES" />
           </Voice>
-          <Voice>
+          <Voice onClick={() => setRoute("products")}>
             <MenuVoice menuvoice="PRODUCTS" />
           </Voice>
           <Voice>
